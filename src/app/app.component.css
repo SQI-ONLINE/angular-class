@@ -1,0 +1,14 @@
+.main-container{
+    width: 100%;
+    background: #555;
+}
+
+.login{
+    width: 50%;
+    float: left;
+}
+
+.signup{
+    width: 50%;
+    float: left;
+}
