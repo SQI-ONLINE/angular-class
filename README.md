@@ -1,6 +1,14 @@
+
+
 # AngularClass
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
+
+## Next Actions
+Clone this repo and run `npm install` inside it from your terminal or command prompt so as to get the modules and packages need.
+
+### NB
+The repository will be updated after every classes, so you might want to pull the new changes if peradventure you are not present in the class or could not type the code during class
 
 ## Development server
 
