@@ -1,0 +1,13 @@
+To install boostrap:
+
+	npm install --save bootsrap
+
+2 Ways of importing bootstrap
+	1. index.html
+		<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+	2. styles.css
+		@import '~bootstrap/dist/css/bootstrap.css'
+
+USAGE
+	The usage remains the same way it has been in vanilla coding (without framework)
+ 
