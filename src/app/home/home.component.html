@@ -1,11 +1,23 @@
 <div class="container-fluid">
-    <div class="row bg-danger" style="height: 250px;">
+    <div class="row bg-danger" style="height: 150px;">
 
     </div>
     <div class="row">
-        <div class="col-10 mx-auto shadow bg-white" style="height: 700px; margin-top: -90px; z-index: 1000">
-                <h3 align="center" class="mt-3" style="border-bottom: 1px solid lightgrey">ANGULAR CLASS</h3>
-
+        <div class="col-10 mx-auto shadow bg-white" style="height: 100%; margin-top: -90px; z-index: 1000">
+                <h3 align="center" class="mt-3" style="border-bottom: 1px solid lightgrey">SIMPLE TODO LIST</h3>
+                <div class="row todo-container p-2" style="max-height: 70vh; overflow-y: auto">
+                    <div class="card-body col-12 shadow animated fadeInUp" *ngFor="let todo of todoArr">
+                        {{todo}}
+                    </div>
+                </div>
+                <div class="row" style="position: fixed; bottom: 10px; right: 10px; left: 10px">
+                    <div class="col-8">
+                        <input class="form-control" placeholder="Input todo" [(ngModel)]="todo">
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-danger btn-block" (click)="addTodo()">Add</button>
+                    </div>
+                </div>
         </div>
     </div>
 </div>
