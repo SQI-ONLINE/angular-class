@@ -1,0 +1,13 @@
+Angular is a Javascript framework developed by Google
+
+To run angular, you will need to have installed node which will be the runtime environment
+
+To install Angular:
+	npm install @angular/cli (this installs the current stable version as at the time of creating this document - v9)
+
+To serve an angular project
+	ng serve --open
+
+To generate component
+
+	ng generate component <component-name> or ng g c <component-name>

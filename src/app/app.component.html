@@ -1,1 +1,15 @@
-<app-home></app-home>
+<div class="container-fluid">
+    <div class="row bg-danger pt-5 pb-5">
+        <div class="col-12 justify-content-center" align="center">
+            <button class="routeBtn mr-3 text-danger" routerLink="/home" routerLinkActive="activeRoute">Home</button>
+            <button class="routeBtn mr-3 text-danger" routerLink="/todo" routerLinkActive="activeRoute">Todo</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-11 mx-auto shadow bg-white" style="height: 100%; margin-top: -25px; z-index: 1000">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+
