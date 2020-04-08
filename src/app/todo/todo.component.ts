@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-todo',
@@ -7,22 +8,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   public todo = "";
-  public todoArr = [];
+  public todoArr: any = [];
   ngOnInit(): void {
-    
+    if(localStorage.getItem('todos')){
+      this.todoArr = JSON.parse(localStorage.getItem('todos'))
+    }else{
+      localStorage.setItem('todos', JSON.stringify([]))
+      this.todoArr = [];
+    }
   }
 
   addTodo(){
-    this.todoArr.push(this.todo)
+    let cTime = new Date();
+    let todo_id = this.todoArr.length+1;
+    this.todoArr.push({todo_id, name: this.todo, time: cTime.toUTCString()})
+    localStorage.setItem('todos', JSON.stringify(this.todoArr))
     this.todo = "";
-    console.log(this.todoArr);
   }
-
+  
   removeTodo(index){
     this.todoArr.splice(index,1)
+    localStorage.setItem('todos', JSON.stringify(this.todoArr))
   }
 
+  viewTodo(todo_item){
+    this.router.navigate(['/todo-detail/'+todo_item])
+  }
 }

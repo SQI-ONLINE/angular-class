@@ -8,7 +8,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { TodoComponent } from './todo/todo.component';
-import { NotFoundComponent } from './not-found/not-found.component'
+import { NotFoundComponent } from './not-found/not-found.component';
+import { TodoDetailComponent } from './todo-detail/todo-detail.component'
  
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NotFoundComponent } from './not-found/not-found.component'
     SignUpComponent,
     HomeComponent,
     TodoComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    TodoDetailComponent
   ],
   imports: [
     BrowserModule,
