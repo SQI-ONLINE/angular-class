@@ -21,7 +21,9 @@ export class TodoComponent implements OnInit {
     }
   }
 
+
   addTodo(){
+
     let cTime = new Date();
     let todo_id = this.todoArr.length+1;
     this.todoArr.push({todo_id, name: this.todo, time: cTime.toUTCString()})

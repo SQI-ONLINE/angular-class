@@ -3,13 +3,22 @@
         <div class="col-12 justify-content-center" align="center">
             <button class="routeBtn mr-3 text-danger" routerLink="/home" routerLinkActive="activeRoute">Home</button>
             <button class="routeBtn mr-3 text-danger" routerLink="/todo" routerLinkActive="activeRoute">Todo</button>
+            <button class="routeBtn mr-3 text-danger" (click)="render(1)">1</button>
+            <button class="routeBtn mr-3 text-danger" (click)="render(2)">2</button>
         </div>
     </div>
+
+
+    <ng-template #container>
+
+    </ng-template>
+
+<!-- 
     <div class="row">
         <div class="col-11 mx-auto shadow bg-white" style="height: 100%; margin-top: -25px; z-index: 1000">
             <router-outlet></router-outlet>
         </div>
-    </div>
+    </div> -->
 </div>
 
 

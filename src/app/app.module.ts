@@ -9,7 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { TodoComponent } from './todo/todo.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { TodoDetailComponent } from './todo-detail/todo-detail.component'
+import { TodoDetailComponent } from './todo-detail/todo-detail.component';
+import { DummyRenderComponent } from './dummy-render/dummy-render.component';
+import { DummyRender2Component } from './dummy-render2/dummy-render2.component'
  
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { TodoDetailComponent } from './todo-detail/todo-detail.component'
     HomeComponent,
     TodoComponent,
     NotFoundComponent,
-    TodoDetailComponent
+    TodoDetailComponent,
+    DummyRenderComponent,
+    DummyRender2Component
   ],
   imports: [
     BrowserModule,

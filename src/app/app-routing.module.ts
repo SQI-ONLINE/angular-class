@@ -23,8 +23,8 @@ const routes: Routes = [
 // favour.com/app
 // favour.com/app/todo
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {enableTracing: true})],
-  // imports: [RouterModule.forRoot(routes)],
+  // imports: [RouterModule.forRoot(routes, {enableTracing: true})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
