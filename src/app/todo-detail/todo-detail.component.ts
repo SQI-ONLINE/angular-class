@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TodoComponent } from '../todo/todo.component';
+import { TodoService } from '../services/todo.service';
 
 @Component({
   selector: 'app-todo-detail',
@@ -11,7 +12,7 @@ import { TodoComponent } from '../todo/todo.component';
 
 export class TodoDetailComponent implements OnInit {
 
-  constructor(public actRoute: ActivatedRoute, public todoComponent: TodoComponent) { }
+  constructor(public actRoute: ActivatedRoute, public todoComponent: TodoComponent, public todoService: TodoService) { }
   public todo_item;
   public todo_id;
   
@@ -22,11 +23,17 @@ export class TodoDetailComponent implements OnInit {
       // console.log(this.todoComponent)
       // let todoArr = this.todoComponent.todoArr;
       // console.log(todoArr);
-      let todoArr = JSON.parse(localStorage.getItem('todos'))
-      console.log(todoArr)
-      let ctodo = todoArr.filter(t => t.todo_id == this.todo_id);
-      this.todo_item = ctodo[0]; 
-      console.log(this.todo_item, "TODO ITEM")
+      // let todoArr = JSON.parse(localStorage.getItem('todos'));
+      // let todoArr = this.todoService.getTodos();
+      this.todoService.getTodos().subscribe(data => {
+        let todoArr = data;
+        console.log(todoArr)
+        
+        let ctodo = todoArr.filter(t => t.todo_id == this.todo_id);
+        this.todo_item = ctodo[0]; 
+
+        console.log(this.todo_item, "TODO ITEM")
+      })
     })
   }
 
