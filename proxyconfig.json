@@ -1,0 +1,9 @@
+{
+    
+    "/todo-backend/*":{
+        "target": "http://localhost:8080/todo-backend",
+        "secure": false,
+        "changeOrigin": true
+    }
+
+}

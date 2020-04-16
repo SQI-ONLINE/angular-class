@@ -23,6 +23,11 @@ export class TodoComponent implements OnInit {
     })
 
 
+    this.todoService.fetchTodos().subscribe(data => {
+      console.log(data);
+    }, error => {
+      console.log(error)
+    })
 
     //fetching student list . subscribe( other operations )
     //select one from the list
@@ -33,6 +38,9 @@ export class TodoComponent implements OnInit {
 
   addTodo(){
 
+    this.todoService.setTodo(this.todo).subscribe(data => {
+      console.log(data);
+    })
     this.todoService.addTodo(this.todo);
     // let cTime = new Date();
     // let todo_id = this.todoArr.length+1;

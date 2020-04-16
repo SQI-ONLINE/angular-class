@@ -11,8 +11,8 @@ import { TodoComponent } from './todo/todo.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 import { DummyRenderComponent } from './dummy-render/dummy-render.component';
-import { DummyRender2Component } from './dummy-render2/dummy-render2.component'
- 
+import { DummyRender2Component } from './dummy-render2/dummy-render2.component';
+import { HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +28,9 @@ import { DummyRender2Component } from './dummy-render2/dummy-render2.component'
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
