@@ -1,0 +1,13 @@
+<h3 align="center" class="mt-3" style="border-bottom: 1px solid lightgrey">SIGN UP FORM</h3>
+
+<div class="row todo-container p-2" style="max-height: 70vh; overflow-y: auto">
+    <form class="col-12" (submit)="processForm()" [formGroup]="profileForm">
+        <input type="text" class="form-control" placeholder="First Name" formControlName="firstName">  <br>
+        <input type="text" class="form-control" placeholder="Last Name" formControlName="lastName"> <br>
+        <input type="text" class="form-control" placeholder="Phone Number" name="phoneNumber" formControlName="phoneNumber"> <br>
+        <input type="email" class="form-control" placeholder="Email" formControlName="email"> <br>
+        <input type="password" class="form-control" placeholder="Password" formControlName="password"> <br>
+
+        <p align="center"><button class="btn btn-danger" [disabled]="!profileForm.valid" [style]="profileForm.valid ? '' : 'background-color: black !important'">Submit</button></p>
+    </form>
+</div>

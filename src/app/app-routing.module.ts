@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 import { TodoGuard } from './todo.guard';
+import { FormsComponent } from './forms/forms.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -15,6 +16,7 @@ const routes: Routes = [
     {path: '', component: HomeComponent, pathMatch: 'full'},
     {path: 'todo', component: TodoComponent}
   ]},
+  {path: 'form', component: FormsComponent},
   {path: '**', component: NotFoundComponent}
 ];
 // favour.com/todo
