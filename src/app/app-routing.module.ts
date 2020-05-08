@@ -6,6 +6,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 import { TodoGuard } from './todo.guard';
 import { FormsComponent } from './forms/forms.component';
+import { ProfGuard } from './prof.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -15,7 +16,7 @@ const routes: Routes = [
   {path: 'app', children: [
     {path: '', component: HomeComponent, pathMatch: 'full'},
     {path: 'todo', component: TodoComponent}
-  ]},
+  ], canActivateChild: [ProfGuard]},
   {path: 'form', component: FormsComponent},
   {path: '**', component: NotFoundComponent}
 ];

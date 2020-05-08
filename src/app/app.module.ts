@@ -14,6 +14,8 @@ import { DummyRender2Component } from './dummy-render2/dummy-render2.component';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsComponent } from './forms/forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PhoneValidatorDirective } from './phone-validator.directive';
+import { EmailValidatorDirective } from './email-validator.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TodoDetailComponent,
     DummyRenderComponent,
     DummyRender2Component,
-    FormsComponent
+    FormsComponent,
+    PhoneValidatorDirective,
+    EmailValidatorDirective
   ],
   imports: [
     BrowserModule,
