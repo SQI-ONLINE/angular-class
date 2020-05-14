@@ -7,6 +7,8 @@ import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 import { TodoGuard } from './todo.guard';
 import { FormsComponent } from './forms/forms.component';
 import { ProfGuard } from './prof.guard';
+import { FormValidateComponent } from './form-validate/form-validate.component';
+import { PipeClassComponent } from './pipe-class/pipe-class.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -18,7 +20,9 @@ const routes: Routes = [
     {path: 'todo', component: TodoComponent}
   ], canActivateChild: [ProfGuard]},
   {path: 'form', component: FormsComponent},
-  {path: '**', component: NotFoundComponent}
+  {path: 'form-validate', component: FormValidateComponent},
+  {path: 'pipe-class', component: PipeClassComponent},
+  {path: '**', component: NotFoundComponent},
 ];
 // favour.com/todo
 // favour.com/home

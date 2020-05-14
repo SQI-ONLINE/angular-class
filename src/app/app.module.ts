@@ -16,6 +16,11 @@ import { FormsComponent } from './forms/forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PhoneValidatorDirective } from './phone-validator.directive';
 import { EmailValidatorDirective } from './email-validator.directive';
+import { FormValidateComponent } from './form-validate/form-validate.component';
+import { WorkMailValidatorDirective } from './work-mail-validator.directive';
+import { PipeClassComponent } from './pipe-class/pipe-class.component';
+import { ExpPipe } from './exp.pipe';
+import { TodoFilterPipe } from './todo-filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +34,12 @@ import { EmailValidatorDirective } from './email-validator.directive';
     DummyRender2Component,
     FormsComponent,
     PhoneValidatorDirective,
-    EmailValidatorDirective
+    EmailValidatorDirective,
+    FormValidateComponent,
+    WorkMailValidatorDirective,
+    PipeClassComponent,
+    ExpPipe,
+    TodoFilterPipe
   ],
   imports: [
     BrowserModule,

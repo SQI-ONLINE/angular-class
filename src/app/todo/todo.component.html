@@ -1,6 +1,7 @@
 <h3 align="center" class="mt-3" style="border-bottom: 1px solid lightgrey">SIMPLE TODO LIST</h3>
+<input class="form-control mb-1 mt-1" [(ngModel)]="filterText">
 <div class="row todo-container p-2" style="max-height: 70vh; overflow-y: auto">
-    <div class="card-body col-12 shadow animated fadeInUp bounceOutLeft" *ngFor="let i = index; let todo of todoArr" (click)="viewTodo(todo.todo_id)">
+    <div class="card-body col-12 shadow animated fadeInUp bounceOutLeft" *ngFor="let i = index; let todo of todoArr | todoFilter:filterText" (click)="viewTodo(todo.todo_id)">
         <div class="row">
             <div class="col-10">{{todo.name | uppercase}}</div>
             <div class="col-2 text-danger" style="cursor: pointer"><b class="del-btn" (click)="removeTodo(i)">X</b></div>

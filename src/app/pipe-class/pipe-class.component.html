@@ -1,0 +1,21 @@
+<!-- <p>pipe-class works!</p> -->
+
+<h4>{{ text | uppercase}}</h4>
+
+<h4>{{ number | number:'7.1-2' }}</h4>
+
+<h4>{{ number | currency:'EUR':'symbol-narrow'}}</h4>
+
+<h4>{{ today_date | date:'mediumTime'}}</h4>
+
+<br><br>
+
+<h4>{{tr_number | exp:factor }}</h4>
+
+<br><br>
+
+<form class="form-row">
+    <input type="text" class="form-control col" name="number" placeholder="Number" [(ngModel)]="tr_number">
+    <input type="text" class="form-control col" name="factor" placeholder="Factor" [(ngModel)]="factor">
+</form>
+<!-- <h4>{{ 'ANGULAR PIPE CLASS' | lowercase }}</h4> -->

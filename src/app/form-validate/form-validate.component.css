@@ -1,0 +1,15 @@
+.ng-valid{
+    border: 1px solid green
+}
+
+.ng-invalid{
+    border-color: tomato
+}
+
+.ng-untouched{
+    border-color: lightgray
+}
+
+.my-touch{
+    border: 5px solid black
+}

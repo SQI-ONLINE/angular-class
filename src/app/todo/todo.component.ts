@@ -14,6 +14,7 @@ export class TodoComponent implements OnInit {
 
   public todo = "";
   public todoArr: any = [];
+  public filterText;
 
   ngOnInit(): void {
     // this.todoArr =  this.todoService.todoArr;
@@ -38,9 +39,9 @@ export class TodoComponent implements OnInit {
 
   addTodo(){
 
-    this.todoService.setTodo(this.todo).subscribe(data => {
-      console.log(data);
-    })
+    // this.todoService.setTodo(this.todo).subscribe(data => {
+    //   console.log(data);
+    // })
     this.todoService.addTodo(this.todo);
     // let cTime = new Date();
     // let todo_id = this.todoArr.length+1;
