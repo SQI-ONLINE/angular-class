@@ -1,0 +1,11 @@
+<mat-card>
+    <mat-card-body>
+        <h4 class="shadow p-2">{{data.title | uppercase}}</h4>
+
+        <div class="p-2">
+            {{data.message}}
+        </div>
+
+        <p><button mat-raised-button (click)="closeDialog()">CLOSE DIALOG</button></p>
+    </mat-card-body>
+</mat-card>

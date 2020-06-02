@@ -9,6 +9,8 @@ import { FormsComponent } from './forms/forms.component';
 import { ProfGuard } from './prof.guard';
 import { FormValidateComponent } from './form-validate/form-validate.component';
 import { PipeClassComponent } from './pipe-class/pipe-class.component';
+import { PipeMakeupClassComponent } from './pipe-makeup-class/pipe-makeup-class.component';
+import { MaterialTestComponent } from './material-test/material-test.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -22,6 +24,8 @@ const routes: Routes = [
   {path: 'form', component: FormsComponent},
   {path: 'form-validate', component: FormValidateComponent},
   {path: 'pipe-class', component: PipeClassComponent},
+  {path: 'pipe-makeup-class', component: PipeMakeupClassComponent},
+  {path: 'material', component: MaterialTestComponent},
   {path: '**', component: NotFoundComponent},
 ];
 // favour.com/todo

@@ -3,6 +3,7 @@
         <div class="col-12">
             <!-- TEMPLATE DRIVEN FORM -->
             <form class="mt-5" style="border: none !important">
+
                 <input type="text" required class="form-control" placeholder="First Name" [(ngModel)]="fName" name="fName" #fname="ngModel" [class.is-invalid]="fname.invalid && fname.touched" [class.is-valid]="fname.valid && fname.touched">
                 <small class="text-danger" *ngIf="fname.invalid && fname.touched">First Name is required</small><br>
                 <input type="text" required class="form-control" placeholder="Last Name" name="lName" [(ngModel)]="lName" #lname="ngModel" [class.is-invalid]="lname.invalid && lname.touched" [class.is-valid]="lname.valid && lname.touched">
@@ -28,7 +29,8 @@
             <!-- REACTIVE FORM -->
             <!-- <button class="btn btn-success" (click)="editDetails()">Edit</button> -->
             <!-- <form class="mt-5" (submit)="submitForm()" [formGroup]="profileForm" style="border: none !important">
-                <input type="text" required class="form-control mb-4" placeholder="First Name" name="fName" formControlName="fName" [class.is-invalid]="profileForm.get('fName').invalid && profileForm.get('fName').touched" [class.is-valid]="profileForm.get('fName').valid && profileForm.get('fName').touched">
+
+               <input type="text" required class="form-control mb-4" placeholder="First Name" name="fName" formControlName="fName" [class.is-invalid]="profileForm.get('fName').invalid && profileForm.get('fName').touched" [class.is-valid]="profileForm.get('fName').valid && profileForm.get('fName').touched">
 
                 <input type="text" class="form-control mb-4" placeholder="Last Name" name="lName" formControlName="lName" [class.is-invalid]="profileForm.get('lName').invalid && profileForm.get('lName').touched" [class.is-valid]="profileForm.get('lName').valid && profileForm.get('lName').touched">
                 <input type="email" class="form-control mb-4" placeholder="Email" name="email" formControlName="email" [class.is-invalid]="profileForm.get('email').invalid && profileForm.get('email').touched" [class.is-valid]="profileForm.get('email').valid && profileForm.get('email').touched">

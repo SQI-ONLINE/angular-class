@@ -14,7 +14,7 @@ export class TodoComponent implements OnInit {
 
   public todo = "";
   public todoArr: any = [];
-  public filterText;
+  public filterText = '';
 
   ngOnInit(): void {
     // this.todoArr =  this.todoService.todoArr;

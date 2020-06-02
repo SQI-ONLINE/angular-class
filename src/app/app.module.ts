@@ -21,6 +21,17 @@ import { WorkMailValidatorDirective } from './work-mail-validator.directive';
 import { PipeClassComponent } from './pipe-class/pipe-class.component';
 import { ExpPipe } from './exp.pipe';
 import { TodoFilterPipe } from './todo-filter.pipe';
+import { PipeMakeupClassComponent } from './pipe-makeup-class/pipe-makeup-class.component';
+import { CustomPipePipe } from './custom-pipe.pipe';
+import { FilterTodoPipePipe } from './filter-todo-pipe.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatSliderModule} from '@angular/material/slider';
+import { MaterialTestComponent } from './material-test/material-test.component';
+import { MaterialModule } from './material.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { DialogTestComponent } from './dialog-test/dialog-test.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,15 +50,23 @@ import { TodoFilterPipe } from './todo-filter.pipe';
     WorkMailValidatorDirective,
     PipeClassComponent,
     ExpPipe,
-    TodoFilterPipe
+    TodoFilterPipe,
+    PipeMakeupClassComponent,
+    CustomPipePipe,
+    FilterTodoPipePipe,
+    MaterialTestComponent,
+    DialogTestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
-  
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    MatFormFieldModule,
+    // MatIcon
   ],
   providers: [],
   bootstrap: [AppComponent]
